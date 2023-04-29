@@ -101,11 +101,11 @@ public class DriverFactory {
 			cap.setCapability("enableVideo", true);
 			cap.setCapability(ChromeOptions.CAPABILITY, optionsManager.getChromeOptions());
 
-			try {
+			/*try {
 				tlDriver.set(new RemoteWebDriver(new URL(prop.getProperty("huburl")), cap));
 			} catch (MalformedURLException e) {
 				e.printStackTrace();
-			}
+			}*/
 
 		}
 
