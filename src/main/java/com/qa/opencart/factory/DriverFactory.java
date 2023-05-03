@@ -189,11 +189,11 @@ public class DriverFactory {
 	 * take sceenshot Ashot
 	 */
 	public String getScreenshot() {
-		File srcFile = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
+		File source = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
 		String path = System.getProperty("user.dir") + "/screenshots/" + System.currentTimeMillis() + ".png";
 		File destination = new File(path);
 		try {
-			FileUtils.copyFile(srcFile, destination);
+			FileUtils.copyFile(source, destination);
 		} catch (IOException e) {
 			LOGGER.error("some exception is coming while creating the screenshot");
 			e.printStackTrace();
